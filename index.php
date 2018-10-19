@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html <?php  language_attributes(); ?>>
 <head>
-	<meta>
+	<meta <?php  bloginfo('charset'); ?>>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
-	<meta name="description" content="">
-	
+	<title><?php  bloginfo('name'); ?></title>
+	<meta name="description" content="<?php  bloginfo('description'); ?>">
+	<?php  wp_head(); ?>
 </head>
 <body <?php  body_class(); ?>> <!-- si quieres una classe especifica con un array en body_class -->
 	<header>
 		<div class="logo">
-			<a href="">Logo</a>
+			<a href="<?php  echo esc_url(home_url('/')); ?>">Logo</a>
 		</div>
-		<button class="Panel-btn"></button>
+		<button class="Panel-btn"><?php _e('Menu Principal', 'cinetheme'); ?></button>
 		<sectrion class="Panel">
 			<nav class="Menu">
 				<ul>
-					<li><a href="">Seccion 1</a></li>
-					<li><a href="">Seccion 2</a></li>
-					<li><a href="">Seccion 3</a></li>
-					<li><a href="">Seccion 4</a></li>
-					<li><a href="">Seccion 5</a></li>
+					<?php  wp_list_pages('title_li' );?> <!-- title_li quita el li Paginas del menu -->
 				</ul>
 			</nav> 
 		</section>
@@ -52,11 +48,11 @@
 			</div>
 			<div>
 			<p>
-				&copy;2018
+				&copy;<?php echo date('Y'); ?>  
 				<a href="">@negreteirv</a>
 			</p></div>
 		</section>
 	</footer>
-
+	<?php  wp_footer(); ?>
 </body>
 </html>
