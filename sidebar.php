@@ -1,20 +1,14 @@
-<aside class="Aside"> 
-  <h2>Contenido lateral</h2>
-  <article class="Widget">
-    <h3>Buscar:</h3>
-    <form action="">
-      <input type="text">
-      <input type="submit">
-    </form>
+<aside class="Sidebar"> 
+  <?php 
+  if (is_active_sidebar('main_sidebar')):
+    dynamic_sidebar('main_sidebar'); 
+  else:
+  ?>
     <article class="Widget">
-      <h3>Ultimas entradas</h3>
-      <ul>
-        <li><a href="http://">Entrada 1</a></li>
-        <li><a href="http://">Entrada 1</a></li>
-        <li><a href="http://">Entrada 1</a></li>
-        <li><a href="http://">Entrada 1</a></li>
-        <li><a href="http://">Entrada 1</a></li>
-      </ul>
+      <h3><?php _e('Buscar','cinetheme'); ?></h3> <!-- funcion __e trae implisito un eco -->
+      <?php  get_search_form();?>
     </article>
-  </article>
+  <?php 
+  endif;
+   ?>
 </aside>
