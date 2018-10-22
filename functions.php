@@ -18,8 +18,8 @@
 //Establecer el ancho máximo permitido para cualquier contenido en el tema, como oEmbeds e imágenes
 if(!isset($content_width)){
   $content_width=800;
-}
 
+}
 
 if ( !function_exists('cinetheme_scripts') ):
   function cinetheme_scripts () {
@@ -31,3 +31,26 @@ if ( !function_exists('cinetheme_scripts') ):
   }
 endif;
 add_action('wp_enqueue_scripts', 'cinetheme_scripts');
+
+
+function cinetheme_menus(){
+  register_nav_menus(array(
+    'main_menu' =>__('Menu Pricipal', 'cinetheme'),
+    'social_menu'=>__('Menu Redes Sociales', 'cinetheme'),
+  ));
+}
+add_action('init','cinetheme_menus');
+
+function cinetheme_register_sidebars(){
+  register_sidebar(array(
+    'name'=>__('Sidebar Principal', 'cinetheme'),
+    'id'=>'main_sidebar',
+    'description'=>__('ESTE ES Sidebar Principal', 'cinetheme'),
+    'before_widget'=>__('<article id="%1$s" class="Widget %2$s">'),
+    'after_widget'=>__(' </article>'),
+    'before_title'=>__('<h3>'),
+    'after_title'=>__('</h3>'),
+  ));
+}
+
+add_action('widgets_init', 'cinetheme_register_sidebars');

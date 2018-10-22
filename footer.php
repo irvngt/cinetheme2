@@ -2,19 +2,21 @@
 	<footer class="Footer">
 		<section class="Footer-conainer">
 			<div>
-				<nav class="SocialMedia">
-					<ul>
-						<li><a href="http://" targt="_blank"></a></li>
-						<li><a href="http://" targt="_blank"></a></li>
-						<li><a href="http://" targt="_blank"></a></li>
-						<li><a href="http://" targt="_blank"></a></li>
-						<li><a href="http://" targt="_blank"></a></li>
-					</ul>
-				</nav>
+				<?php  
+				if(has_nav_menu('social_menu')):
+					wp_nav_menu(array(
+						'theme_location' => 'social_menu',
+						'container' => 'nav',
+						'container_class' => 'SocialMedia',
+						'link_before' => '<span class="sr-text">', /* etiqueta antes y despues del enlace */
+						'link_after' => '</span>'
+					));
+				endif; 
+					?>
 			</div>
 			<div>
 			<p>
-				&copy;<?php echo date('Y'); ?>  
+				&copy;<?php echo date('Y').__(' Derechos Reservados','cinetheme');?>  
 				<a href="">@negreteirv</a>
 			</p></div>
 		</section>
