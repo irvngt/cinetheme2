@@ -54,3 +54,57 @@ function cinetheme_register_sidebars(){
 }
 
 add_action('widgets_init', 'cinetheme_register_sidebars');
+
+
+function cinetheme_setup(){
+  load_theme_textdomain('cinetheme', get_template_directory().'/languages');
+  add_theme_support('post-thumbnails');
+
+    add_theme_support('html5', array(
+    'comment-list',
+    'comment-form',
+    'search-form',
+    'gallery',
+    'caption'
+  ));
+
+  //https://codex.wordpress.org/Post_Formats
+  add_theme_support('post-formats',  array (
+    'aside',
+    'gallery',
+    'link',
+    'image',
+    'quote',
+    'status',
+    'video',
+    'audio',
+    'chat'
+  ) );
+  
+  /*permite que los themes y plugins administren el título<title>, si se activa,no debe usarse wp_title()*/
+  add_theme_support('title-tag');
+
+  /* Feed RSS */
+  add_theme_support('automatic-feed-links');
+
+  //Ocultar Tags innecesarios del head
+  //Versión de WordPress
+  remove_action('wp_head', 'wp_generator');
+  //Imprime sugerencias de recursos para los navegadores para precargar, pre-renderizar y pre-conectarse a sitios web
+  remove_action('wp_head', 'wp_resource_hints', 2);
+  //Muestre el enlace al punto final del servicio Really Simple Discovery
+  remove_action('wp_head', 'rsd_link');
+  //Muestre el enlace al archivo de manifiesto de Windows Live Writer
+  remove_action('wp_head', 'wlwmanifest_link');
+  //Inyecta rel = shortlink en el encabezado si se define un shortlink para la página actual.
+  remove_action('wp_head', 'wp_shortlink_wp_head');
+  
+  //Quitar scripts para soporte a emojis
+  //remove_action('wp_print_styles', 'print_emoji_styles');
+  //remove_action('wp_head', 'print_emoji_detection_script', 7);
+
+  //Quitar la barra de administración en el Frontend
+  add_filter('show_admin_bar', '__return_false');
+}
+
+add_action('after_setup_theme','cinetheme_setup');
