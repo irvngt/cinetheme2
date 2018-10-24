@@ -1,5 +1,7 @@
-<?php get_header(); ?>
-<div class="Content-container Page">
+<?php 
+/* Template Name: Página sin Sidebar */
+get_header(); ?>
+<div class="Content-container Page FullWidth">
   <main class="Main">
     <?php while ( have_posts() ) : the_post(); ?>
       <section class="PostContent">
@@ -7,6 +9,5 @@
       </section>
     <?php endwhile; ?>
   </main>
-  <?php  get_sidebar(); ?>
 </div>
 <?php  get_footer(); ?>
