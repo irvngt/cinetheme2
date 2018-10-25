@@ -98,13 +98,13 @@ function cinetheme_setup(){
   remove_action('wp_head', 'wlwmanifest_link');
   //Inyecta rel = shortlink en el encabezado si se define un shortlink para la página actual.
   remove_action('wp_head', 'wp_shortlink_wp_head');
-  
+
   //Quitar scripts para soporte a emojis
   //remove_action('wp_print_styles', 'print_emoji_styles');
   //remove_action('wp_head', 'print_emoji_detection_script', 7);
 
   //Quitar la barra de administración en el Frontend
-  add_filter('show_admin_bar', '__return_false');
+  /* add_filter('show_admin_bar', '__return_false'); */
 }
 
 add_action('after_setup_theme','cinetheme_setup');
