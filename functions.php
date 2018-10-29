@@ -15,7 +15,7 @@
  global $font_awesome; 
  global $hamburgers; 
 
- $google_fonts='https://fonts.googleapis.com/css?family=Righteous|Ubuntu'; /* varglobal para llamarlo en en front, admin y login page */
+ $google_fonts='https://fonts.googleapis.com/css?family=Righteous|Ubuntu'; /* varGlobal para llamarlo en en front, admin y login page */
  $font_awesome ='https://use.fontawesome.com/releases/v5.0.13/css/all.css';
 $hamburgers ='https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.3/hamburgers.min.css';
 
