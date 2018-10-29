@@ -33,8 +33,9 @@ if ( !function_exists('cinetheme_scripts') ):
     global $hamburgers; 
     wp_enqueue_style( 'google-fonts', $google_fonts, array(), '1.0.0', 'all' );
     wp_enqueue_style( 'font_awesome', $font_awesome, array(), '5.0.13', 'all' );
-    wp_enqueue_style( 'hamburgers', $hamburgers, array(), '0.9.3', 'all' );
-    wp_enqueue_style( 'style', get_stylesheet_uri(), array('google-fonts','font_awesome','hamburgers'), '1.0.0', 'all' );
+    wp_enqueue_style( 'hamburgers', $hamburgers, array(), '0.9.3', 'all' ); 
+    wp_enqueue_style( 'custom_properties', get_template_directory_uri().'/css/custom_properties.css', array('google-fonts'), '1.0.0', 'all' );
+    wp_enqueue_style( 'style', get_stylesheet_uri(), array('google-fonts','font_awesome','hamburgers, custom_properties'), '1.0.0', 'all' );
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'script', get_template_directory_uri() . '/script.js', array('jquery'), '1.0.0', true );
   }
