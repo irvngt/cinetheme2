@@ -9,5 +9,5 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: movie, blog, magazine, db, 
 Text Domain: cinetheme
-*/
+*/html{-webkit-box-sizing:border-box;box-sizing:border-box;font-family:var(--main-font),var(--alternate-font);font-size:var(--font-size);line-height:var(--line-height);color:var(--text-color);background-color:var(--bg-modal-color)}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit;padding:0;margin:0}body{overflow-x:hidden}a{font-weight:700;text-decoration:none;color:var(--link-color);-webkit-transition:all .3s ease-out;transition:all .3s ease-out}a:hover{color:var(--link-hover-color)}img{margin:0 auto;display:block;max-width:100%;height:auto}li{margin-left:1rem;list-style-position:inside}::-moz-selection{background-color:var(--main-color);color:var(--second-color)}::selection{background-color:var(--main-color);color:var(--second-color)}
 /*# sourceMappingURL=css/style.css.map */

@@ -1,0 +1,26 @@
+/* ********** Custom Properties ********** */
+:root{
+  --main-font: 'Ubuntu';
+  --alternate-font: sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
+
+  --main-color: #0096D9;
+  --main-modal-color: rgba(0, 150, 217, .75);
+  --second-color: #171226;
+  --second-modal-color: rgba(23, 18, 38, .75);
+
+  --bg-color: #FFF;
+  --bg-modal-color: rgba(0, 0, 0, .5);
+  --bg-alternate-color: #F3F3F3;
+  --border-color: #DDD;
+
+  --text-color: #333;
+  --title-color: var(--second-color);
+
+  --link-color: var(--main-color);
+  --link-hover-color: var(--second-color);
+
+  --container-width: 1200px;
+  --header-height: 4rem;
+}

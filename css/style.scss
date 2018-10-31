@@ -10,4 +10,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: movie, blog, magazine, db, 
 Text Domain: cinetheme
 */
-
+  
+@import 'reset';
+@import 'header';
+@import 'menu';
+@import 'grid_layout';
+@import 'footer';
+@import 'widgets';
+@import 'search_form';
+@import 'social_menu';
+@import 'post';
+@import 'pagination';
+@import 'comments.css';
+@import 'not_found';
+@import 'author';
+@import 'wp_custom_header';
+@import 'hero_image'; 
