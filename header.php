@@ -16,5 +16,11 @@
       ?>
 	  </section>
 	</header>
-	<?php get_template_part('template-parts/header-custom'); ?>
+	<?php  
+		if (is_home()||is_front_page()): 
+			get_template_part('template-parts/header-custom');
+		else:
+			get_template_part('template-parts/hero-image');
+		endif;
+	?>
 	<section class="Content">

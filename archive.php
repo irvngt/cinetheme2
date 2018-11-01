@@ -6,10 +6,10 @@
 
       /* condicional tags */
       if ( is_category() ):
-        $term_title = __('Resultados para la categoría:', 'mawt');
+        $term_title = __('Resultados para la categoría:', 'cinetheme');
       endif;
       if ( is_tag() ):
-        $term_title = __('Resultados para la etiqueta:', 'mawt');
+        $term_title = __('Resultados para la etiqueta:', 'cinetheme');
       endif;
     ?>
     
