@@ -2,7 +2,7 @@
 /* codigo para validar e insertar el titulo, descripcion y HeroImage en cada seccion de la pagina*/
 if ( is_single() ):
   $title = get_the_title();
-  $subtitle = get_avatar( get_the_author_id(), 100) . get_the_author();
+  $subtitle = get_avatar( get_the_author_meta('ID'), 100) . get_the_author();
   $hero_image = get_the_post_thumbnail_url();
 elseif ( is_page() ):
   $title = get_the_title();
@@ -22,7 +22,7 @@ elseif ( is_tag() ):
 elseif ( is_author() ):
   $title =  get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
   $subtitle = get_the_author_posts() . ' publicaciones';
-  $hero_image = get_avatar_url( get_the_author_id() );
+  $hero_image = get_avatar_url( get_the_author_meta('ID') );
 elseif ( is_search() ):
   $title = get_search_query();
   $subtitle = __('Resultados de búsqueda', 'cinetheme');

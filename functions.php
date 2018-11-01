@@ -114,7 +114,7 @@ function cinetheme_setup(){
   //remove_action('wp_head', 'print_emoji_detection_script', 7);
 
   //Quitar la barra de administración en el Frontend
-  /* add_filter('show_admin_bar', '__return_false'); */
+  add_filter('show_admin_bar', '__return_false');
 }
 
 add_action('after_setup_theme','cinetheme_setup');
