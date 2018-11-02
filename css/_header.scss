@@ -12,17 +12,17 @@
 
   &-container{
     position: relative;
-    margin: auto;
+    margin: 0 auto;
     max-width: var(--container-width);
   }
 }
 
 .Logo{
-  font-size: 2em;
-  text-decoration: none;
-  color: var(--main-color);
+  position: absolute;
+  z-index: 999;
   & a{
     font-size: 2rem;
+    text-decoration: none;
     color: var(--main-color);
     transition: all 3s ease;
   }
@@ -47,6 +47,15 @@
   overflow: auto;
   background-color: var(--second-modal-color);
   transition: .3s ease;
+  transition: transform .3s ease;
+  /* De arriba */
+/*  transform: translate(0, -100%); */
+  /* De abajo */
+/*   transform: translate(0, 100%); */
+  /* De la izquierda */
+  transform: translate(-100%, 0);
+  /* De la derecha */
+/*   transform: translate(100%, 0); */
 
 
   &.is-active{transform: translate(0,0);}
@@ -58,6 +67,40 @@
 
   }
 }
+
+.hamburger{
+  &:focus{
+    outline:0;
+    border:0;
+  }
+  &-inner,
+  &-inner:after,
+  &-inner:before{
+    background-color: var(--main-color);
+  }
+}
+
+@media screen and(min-width:64em){
+  .Header-container{display: flex;}
+
+  .Logo{
+    position: static;
+    width: 100%
+  }
+  .Panel{
+    position: static;
+    width: 90%;
+    display: flex;
+    overflow-y: visible;
+    background-color: transparent;
+    transform: translate(0,0);
+
+    &-btn{
+      display: none;
+    }
+  }
+}
+
 
 
 
