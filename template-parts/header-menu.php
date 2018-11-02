@@ -1,4 +1,8 @@
-<button class="Panel-btn"><?php _e('Menu Principal', 'cinetheme'); ?></button>
+  <button class="Panel-btn  hamburger  hamburger--emphatic" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
   <section class="Panel">
     <?php  
     if(has_nav_menu('main_menu')):

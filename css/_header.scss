@@ -1,0 +1,63 @@
+/* ****** Header & Panel Navigation ********* */
+
+.Header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  background-color: var(--second-color);
+
+  &-container{
+    position: relative;
+    margin: auto;
+    max-width: var(--container-width);
+  }
+}
+
+.Logo{
+  font-size: 2em;
+  text-decoration: none;
+  color: var(--main-color);
+  & a{
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: all 3s ease;
+  }
+  &:hover{
+    opacity:.75;
+  }
+
+  & img{
+    padding: .25rem;
+    width: auto;
+    height: var(--header-height);
+  }
+}
+
+.Panel{
+  position: fixed;
+  z-index: 998;
+  top: 0;  /* 4 lados a 0 para que se estire */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: var(--second-modal-color);
+  transition: .3s ease;
+
+
+  &.is-active{transform: translate(0,0);}
+  &-btn{
+    position: absolute;
+    z-index: 999;
+    top: .5rem;
+    right: 0;
+
+  }
+}
+
+
+
