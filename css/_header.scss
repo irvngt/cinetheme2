@@ -24,10 +24,11 @@
     font-size: 2rem;
     text-decoration: none;
     color: var(--main-color);
-    transition: all 3s ease;
-  }
-  &:hover{
-    opacity:.75;
+    transition: all .3s ease;
+
+    &:hover{ 
+      opacity:.75; 
+    }
   }
 
   & img{
@@ -43,28 +44,28 @@
   top: 0;  /* 4 lados a 0 para que se estire */
   bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  overflow: auto;
+  overflow-y: auto;
   background-color: var(--second-modal-color);
-  transition: .3s ease;
   transition: transform .3s ease;
   /* De arriba */
-/*  transform: translate(0, -100%); */
+ /*  transform: translate(0, -100%); */
   /* De abajo */
-/*   transform: translate(0, 100%); */
+  /*   transform: translate(0, 100%); */
   /* De la izquierda */
   transform: translate(-100%, 0);
   /* De la derecha */
-/*   transform: translate(100%, 0); */
+ /*   transform: translate(100%, 0); */
 
-
-  &.is-active{transform: translate(0,0);}
+  
+ &.is-active{transform: translate(0,0);}
   &-btn{
     position: absolute;
     z-index: 999;
-    top: .5rem;
+    top: -.5rem;
     right: 0;
-
+  
   }
 }
 
@@ -85,7 +86,7 @@
 
   .Logo{
     position: static;
-    width: 100%
+    width: 10%;
   }
   .Panel{
     position: static;
@@ -100,7 +101,3 @@
     }
   }
 }
-
-
-
-

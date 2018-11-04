@@ -9,7 +9,7 @@
         wp_nav_menu(array(
           'theme_location'=>'main_menu',
           'container'=>'nav',
-          'container-class'=>'Menu'        
+          'container_class'=>'Menu'        
         ));
     else:
     ?>

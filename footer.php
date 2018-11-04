@@ -1,6 +1,6 @@
 </section>
 	<footer class="Footer">
-		<section class="Footer-conainer">
+		<section class="Footer-container">
 			<div>
 				<?php  
 				if(has_nav_menu('social_menu')):

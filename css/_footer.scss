@@ -1,0 +1,30 @@
+/* ********** Footer ********** */
+.Footer {
+  background-color: var(--bg-alternate-color);
+
+  &-container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: var(--container-width);
+    min-height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & > div { width: 100%; }
+
+    @media screen and (min-width: 64em) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+
+      & > div {
+        width: 50%;
+
+        &:last-child { order: -1; }
+      }
+    }
+  }
+}
