@@ -14,7 +14,7 @@
 
   & a {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
     color: var(--main-color);
     transition: all .3s ease;
@@ -37,7 +37,7 @@
 
     & a {
       padding: 0 .5rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       border-top: medium solid transparent;
 
       &:hover {
@@ -75,6 +75,7 @@
     &:hover > .sub-menu {
       opacity: 1;
       visibility: visible;
+      width: 150px;
     }
   }
 }
