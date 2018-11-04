@@ -1,0 +1,143 @@
+/* http://www.wpbeginner.com/wp-themes/how-to-style-your-wordpress-comments-layout/ */
+
+
+.Comments h3 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: var(--second-color);
+}
+
+/* Styles CommentsList WordPress */
+ol.commentlist {
+  list-style:none;
+  margin-bottom: 2rem;
+}
+ol.commentlist li {
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+ol.commentlist li.alt {}
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment {
+  border-bottom: thin dotted var(--main-color);
+  padding:1em;
+}
+ol.commentlist li.comment div.comment-author {}
+ol.commentlist li.comment div.vcard { font-size: 1rem; }
+ol.commentlist li.comment div.vcard cite.fn {}
+ol.commentlist li.comment div.vcard cite.fn a.url {}
+ol.commentlist li.comment div.vcard img.avatar {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  border-radius: 50%;
+}
+ol.commentlist li.comment div.vcard img.avatar-32 {}
+ol.commentlist li.comment div.vcard img.photo {}
+ol.commentlist li.comment div.vcard span.says {}
+ol.commentlist li.comment div.comment-metadata { font-size: .75rem; }
+ol.commentlist li.comment div.comment-meta {}
+ol.commentlist li.comment div.comment-meta a {}
+ol.commentlist li.comment p { margin-bottom: 1rem; }
+ol.commentlist li.comment ul {
+  list-style:none;
+  margin: 0 0 1rem 2rem;
+}
+ol.commentlist li.comment div.reply { font-size: .75rem; }
+ol.commentlist li.comment div.reply a {}
+ol.commentlist li.comment ul.children {
+  list-style: none;
+  margin: 1rem 0 0;
+}
+ol.commentlist li.comment ul.children li {}
+ol.commentlist li.comment ul.children li.alt {}
+ol.commentlist li.comment ul.children li.bypostauthor {}
+ol.commentlist li.comment ul.children li.byuser {}
+ol.commentlist li.comment ul.children li.comment {}
+ol.commentlist li.comment ul.children li.comment-author-admin {}
+ol.commentlist li.comment ul.children li.depth-2 {
+  margin: 0 0 .25rem .25rem;
+  border-left: medium solid #333;
+}
+ol.commentlist li.comment ul.children li.depth-3 {
+  margin: 0 0 .25rem .25rem;
+  border-left: medium solid #555;
+}
+ol.commentlist li.comment ul.children li.depth-4 {
+  margin: 0 0 .25rem .25rem;
+  border-left: medium solid #777;
+}
+ol.commentlist li.comment ul.children li.depth-5 {
+  margin: 0 0 .25rem .25rem;
+  border-left: medium solid #999;
+}
+ol.commentlist li.comment ul.children li.odd {}
+ol.commentlist li.even { background-color:#FEFEFE; }
+ol.commentlist li.odd { background-color: #EFEFEF; }
+ol.commentlist li.parent { border-left: thick solid #111; }
+ol.commentlist li.thread-alt {}
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+
+/* Styles CommentsForm WordPress */
+div#respond {}
+h3#reply-title {}
+h3#reply-title small {}
+form#commentform {
+  padding: 1rem;
+  background-color: var(--bg-color);
+}
+form#commentform p {
+  display: flex;
+  flex-direction: column;
+}
+form#commentform p.comment-notes { flex-direction: row; }
+form#commentform label { font-weight: bold; }
+form#commentform input:not([type="submit"]),
+form#commentform textarea {
+  padding: .5rem;
+  border: thin solid var(--second-color);
+  background-color: var(--bg-alternate-color);
+  color: var(--main-color);
+  font-size: 1rem;
+  font-family: var(--main-font);
+  resize: none;
+}
+p.comment-form-author {}
+p.coment-form-author label {}
+p.comment-form-author input#author {}
+p.comment-form-email {}
+p.comment-form-email label {}
+p.comment-form-email input#email {}
+p.comment-form-url {}
+p.comment-form-url label {}
+p.comment-form-url input#url {}
+span.required {
+  color: var(--main-color);
+  font-weight: bold;
+}
+p.comment-form-comment {}
+p.comment-form-comment label {}
+p.comment-form-comment textarea#comment {}
+p.must-log-in {}
+p.logged-in-as {}
+p.comment-notes {}
+p.form-allowed-tags {}
+p.form-allowed-tags code {}
+p.form-submit {}
+input#submit {
+  margin-left: auto;
+  padding: 1rem;
+  width: 50%;
+  font-family: var(--main-font);
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all .3s ease-out;
+}
+input#submit:hover { background-color: var(--second-color); }
