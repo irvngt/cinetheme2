@@ -11,6 +11,19 @@
                       'sidebar';
   grid-gap: 1rem;
 } 
+
+.Content-container.Page{
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2,auto);
+  grid-template-areas: 'main'
+                      'sidebar';
+}
+
+.Content-container.Page.FullWidth{
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: 'main';
+}
 .Main{grid-area: main;}
 .Main p{margin: 1rem 0;}
 .Sidebar{grid-area: sidebar;}
@@ -31,4 +44,17 @@
     grid-template-areas: 'main sidebar'
                         'features sidebar'
   } 
+
+  .Content-container.Page{
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'main sidebar';
+  }
+
+  .Content-container.Page.Sidebar-left{
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'sidebar main';
+  }
+   
 }

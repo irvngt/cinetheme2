@@ -1,0 +1,39 @@
+/* ********** Hero Image ********** */
+.HeroImage {
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-image: var(--bg-url);
+  background-attachment: var(--bg-attach);
+  background-size: var(--bg-size);
+  background-position-x: var(--bg-x);
+  background-position-y: var(--bg-y);
+
+  & > div {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    color: #FFF;
+  }
+
+  & h1 {
+    padding: 0 1rem;
+    font-size: 5vw;
+  }
+
+  & p {
+    width: 60%;
+    font-size: 3.5vw;
+
+    @media screen and (min-width: 64em) {
+      width: 80%;
+      font-size: 2.5vw;
+    }
+  }
+
+  & img { border-radius: 50%; }
+}
