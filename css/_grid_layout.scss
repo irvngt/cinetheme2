@@ -5,7 +5,7 @@
   max-width: var(--container-width);
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: (3, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas: 'main'
                       'features'
                       'sidebar';
@@ -27,8 +27,8 @@
   .Content-container{
     margin: 1rem auto;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: (2, auto);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas: 'main sidebar'
-                        'feature sidebar'
+                        'features sidebar'
   } 
 }

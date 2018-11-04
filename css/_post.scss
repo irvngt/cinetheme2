@@ -1,0 +1,36 @@
+
+.PostCard {
+  margin: 0 auto 2rem;
+  max-width: calc(var(--container-width) / 3 );
+  border: thin solid var(--border-color);
+  background-color: var(--bg-alternate-color);
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+
+  & figcaption {
+    padding: 1rem;
+  }
+
+  & h2 {
+    margin-top: -1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 37.5em) {
+    max-width: calc(var(--container-width) / 2 );
+  }
+
+  @media screen and (min-width: 64em) {
+    max-width: var(--container-width);
+  }
+}
+
+.PostContent {
+  padding: 1rem;
+  border: thin solid var(--border-color);
+  background-color: var(--bg-alternate-color);
+}
