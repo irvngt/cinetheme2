@@ -1,0 +1,34 @@
+/* **************Content******************** */
+
+.Content-container{
+  margin: 0 auto;
+  max-width: var(--container-width);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: (3, auto);
+  grid-template-areas: 'main'
+                      'features'
+                      'sidebar';
+  grid-gap: 1rem;
+} 
+.Main{grid-area: main;}
+.Main p{margin: 1rem 0;}
+.Sidebar{grid-area: sidebar;}
+
+.Pagination,
+.Comments{
+  grid-area: features;
+  padding: 1rem;
+  border: thin solid var(--border-color);
+  background-color:var(--bg-alternate-color);;
+}
+
+@media screen and(min-width:64em){
+  .Content-container{
+    margin: 1rem auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: (2, auto);
+    grid-template-areas: 'main sidebar'
+                        'feature sidebar'
+  } 
+}
