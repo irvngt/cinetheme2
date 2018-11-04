@@ -1,0 +1,31 @@
+/* Social Media */
+
+.SocialMedia{
+  & ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+  & .sr-text{display: none;}
+  & a{
+    font-size: 1.5rem;
+
+    @media screen and(min-width:64em) {font-size: 2rem;}
+
+    &::before{
+      content: '\f19a';
+      display: inline-block;
+      font-family: 'Font Awesome 5 Brands';
+    }
+
+    &[href*="facebook"]::before{content:'\f09a';}
+    &[href*="twitter"]::before{content: '\f099';} 
+    &[href*="github"]::before{content: '\f09b';} 
+    &[href*="codepen"]::before{content: '\f1cb';} 
+    &[href*="instagram"]::before{content: '\f16d';} 
+    &[href*="youtube"]::before{content: '\f167';} 
+  }
+}
+
+
+
