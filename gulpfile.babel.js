@@ -34,8 +34,8 @@ imageminOptions={
     svgoPlugins:[{removeViewBox:false}] 
 },
 wpPotOptions = {
-    domain: 'cinecoder', 
-    package: 'cinecoder',
+    domain: 'cinetheme', 
+    package: 'cinetheme',
     lastTranslator: 'Irving Mendoza <irving@webdesignrs.com>'
   },
 potFile = './languages/en_US.pot' 
